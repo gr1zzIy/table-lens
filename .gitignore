@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+**/TestResults/
+.vs/
+.idea/
+.DS_Store
+Thumbs.db
+artifacts/
+*.user
+*.suo
+*.bak
+*.tmp
