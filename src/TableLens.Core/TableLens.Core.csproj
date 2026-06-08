@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="DotNetDBF" Version="7.0.1" />
+    <PackageReference Include="CsvHelper" Version="33.1.0" />
+  </ItemGroup>
+</Project>
