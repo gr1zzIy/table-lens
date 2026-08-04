@@ -1,0 +1,45 @@
+<Application xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Class="TableLens.Desktop.App" RequestedThemeVariant="Default">
+  <Application.Resources>
+    <ResourceDictionary>
+    <SolidColorBrush x:Key="AccentBrush">#4677F5</SolidColorBrush>
+    <ResourceDictionary.ThemeDictionaries>
+      <ResourceDictionary x:Key="Light">
+        <SolidColorBrush x:Key="CanvasBrush">#F5F7FB</SolidColorBrush>
+        <SolidColorBrush x:Key="SurfaceBrush">#FFFFFF</SolidColorBrush>
+        <SolidColorBrush x:Key="SidebarBrush">#EEF2F9</SolidColorBrush>
+        <SolidColorBrush x:Key="LineBrush">#DEE4EF</SolidColorBrush>
+        <SolidColorBrush x:Key="TextBrush">#17243A</SolidColorBrush>
+        <SolidColorBrush x:Key="MutedBrush">#65748B</SolidColorBrush>
+        <SolidColorBrush x:Key="SoftAccentBrush">#E7EEFF</SolidColorBrush>
+      </ResourceDictionary>
+      <ResourceDictionary x:Key="Dark">
+        <SolidColorBrush x:Key="CanvasBrush">#121A29</SolidColorBrush>
+        <SolidColorBrush x:Key="SurfaceBrush">#182235</SolidColorBrush>
+        <SolidColorBrush x:Key="SidebarBrush">#141E30</SolidColorBrush>
+        <SolidColorBrush x:Key="LineBrush">#2B3952</SolidColorBrush>
+        <SolidColorBrush x:Key="TextBrush">#E4ECFA</SolidColorBrush>
+        <SolidColorBrush x:Key="MutedBrush">#A0AEC5</SolidColorBrush>
+        <SolidColorBrush x:Key="SoftAccentBrush">#223858</SolidColorBrush>
+      </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+      </ResourceDictionary>
+  </Application.Resources>
+  <Application.Styles>
+    <FluentTheme />
+    <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml" />
+    <Style Selector="Window"><Setter Property="Background" Value="{DynamicResource CanvasBrush}" /><Setter Property="Foreground" Value="{DynamicResource TextBrush}" /><Setter Property="FontSize" Value="13" /></Style>
+    <Style Selector="Button"><Setter Property="CornerRadius" Value="7" /><Setter Property="Padding" Value="13,8" /></Style>
+    <Style Selector="Button.primary"><Setter Property="Background" Value="{StaticResource AccentBrush}" /><Setter Property="Foreground" Value="White" /><Setter Property="BorderThickness" Value="0" /></Style>
+    <Style Selector="Button.quiet"><Setter Property="Background" Value="Transparent" /><Setter Property="BorderThickness" Value="0" /></Style>
+    <Style Selector="Button.danger"><Setter Property="Foreground" Value="#D35D64" /></Style>
+    <Style Selector="TextBox"><Setter Property="CornerRadius" Value="6" /></Style>
+    <Style Selector="ComboBox"><Setter Property="CornerRadius" Value="6" /></Style>
+    <Style Selector="TextBlock.muted"><Setter Property="Foreground" Value="{DynamicResource MutedBrush}" /></Style>
+    <Style Selector="TextBlock.eyebrow"><Setter Property="Foreground" Value="{DynamicResource MutedBrush}" /><Setter Property="FontSize" Value="11" /><Setter Property="FontWeight" Value="SemiBold" /><Setter Property="LetterSpacing" Value="1.4" /></Style>
+    <Style Selector="TabItem"><Setter Property="FontSize" Value="14" /><Setter Property="FontWeight" Value="Medium" /></Style>
+    <Style Selector="ListBoxItem"><Setter Property="CornerRadius" Value="7" /><Setter Property="Padding" Value="8,5" /></Style>
+    <Style Selector="DataGrid"><Setter Property="Background" Value="{DynamicResource SurfaceBrush}" /><Setter Property="BorderThickness" Value="0" /><Setter Property="GridLinesVisibility" Value="Horizontal" /><Setter Property="HorizontalGridLinesBrush" Value="{DynamicResource LineBrush}" /><Setter Property="RowHeight" Value="34" /><Setter Property="ColumnHeaderHeight" Value="40" /></Style>
+    <Style Selector="DataGridColumnHeader"><Setter Property="Background" Value="{DynamicResource SidebarBrush}" /><Setter Property="FontWeight" Value="SemiBold" /></Style>
+    <Style Selector="DataGridRow:pointerover"><Setter Property="Background" Value="{DynamicResource SoftAccentBrush}" /></Style>
+  </Application.Styles>
+</Application>
