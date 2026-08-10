@@ -1,0 +1,1709 @@
+{
+  "Schemas": [
+    {
+      "FileMask": "SPabDBF5",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "AB",
+          "Description": "Особовий рахунок"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "DTnd",
+          "Description": "Дата початку дії"
+        },
+        {
+          "Name": "Vkv",
+          "Description": "Втрати теплової енергії (кКал/год) у квартирі"
+        },
+        {
+          "Name": "Vmzk",
+          "Description": "Втрати теплової енергії (кКал/год) місць загального користування"
+        },
+        {
+          "Name": "izol",
+          "Description": "Ізоляція"
+        },
+        {
+          "Name": "act",
+          "Description": "Акт на демонтаж"
+        },
+        {
+          "Name": "DTact",
+          "Description": "Дата акта"
+        },
+        {
+          "Name": "sklav",
+          "Description": "Акт склав"
+        },
+        {
+          "Name": "nMZK",
+          "Description": "Наявність опалювальних приладів МЗК"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPabDBF4",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "AB",
+          "Description": "Особовий рахунок"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "Pnom",
+          "Description": "Порядковий номер"
+        },
+        {
+          "Name": "Dtd",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "PIB",
+          "Description": "ПІБ"
+        },
+        {
+          "Name": "DTn",
+          "Description": "Дата народження"
+        },
+        {
+          "Name": "pasport",
+          "Description": "Серія та № паспорта"
+        },
+        {
+          "Name": "ind",
+          "Description": "Ідентифікаційний код"
+        },
+        {
+          "Name": "DTpr",
+          "Description": "Дата прописки"
+        },
+        {
+          "Name": "DTv",
+          "Description": "Дата прописки"
+        },
+        {
+          "Name": "connectR",
+          "Description": "Дата прописки"
+        },
+        {
+          "Name": "work",
+          "Description": "Місце роботи"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPabDBF3",
+      "AllowAdditionalFields": false,
+      "Fields": []
+    },
+    {
+      "FileMask": "SPabDBF",
+      "AllowAdditionalFields": true,
+      "Fields": [
+        {
+          "Name": "AB",
+          "Description": "Особовий рахунок"
+        },
+        {
+          "Name": "NAME",
+          "Description": "ПІБ / назва власника"
+        },
+        {
+          "Name": "KodTY",
+          "Description": "Код будинку / об'єкта обліку"
+        },
+        {
+          "Name": "DTz1",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "FLAT",
+          "Description": "Номер квартири"
+        },
+        {
+          "Name": "Date12",
+          "Description": "Дата завершення"
+        },
+        {
+          "Name": "Prich",
+          "Description": "Причина завершення"
+        },
+        {
+          "Name": "OSN",
+          "Description": "Підстава завершення"
+        },
+        {
+          "Name": "dateVKn",
+          "Description": "Дата внесення в книгу"
+        },
+        {
+          "Name": "dDog",
+          "Description": "Дата договору"
+        },
+        {
+          "Name": "Passport",
+          "Description": "Паспорт"
+        },
+        {
+          "Name": "IndN",
+          "Description": "Ідентифікаційний номер"
+        },
+        {
+          "Name": "Prim",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "dtD",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "Kpr",
+          "Description": "Кількість проживаючих"
+        },
+        {
+          "Name": "Hpr",
+          "Description": "Висота приміщення"
+        },
+        {
+          "Name": "Sop",
+          "Description": "Опалювальна площа"
+        },
+        {
+          "Name": "Sz",
+          "Description": "Загальна площа"
+        },
+        {
+          "Name": "Kroom",
+          "Description": "Кількість кімнат"
+        },
+        {
+          "Name": "Ost",
+          "Description": "Опис / причина зміни"
+        },
+        {
+          "Name": "Floor",
+          "Description": "Поверх"
+        },
+        {
+          "Name": "Pod",
+          "Description": "Під'їзд"
+        },
+        {
+          "Name": "GVP",
+          "Description": "Ознака ГВП"
+        },
+        {
+          "Name": "TE",
+          "Description": "Ознака опалення"
+        },
+        {
+          "Name": "Prinal",
+          "Description": "Форма належності"
+        },
+        {
+          "Name": "Tel",
+          "Description": "Телефон"
+        },
+        {
+          "Name": "Prim2",
+          "Description": "Примітка"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpom6",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "KPOM",
+          "Description": "Код приміщення"
+        },
+        {
+          "Name": "Servise",
+          "Description": "Послуга, що обліковується"
+        },
+        {
+          "Name": "NomL",
+          "Description": "Порядковий номер приладу"
+        },
+        {
+          "Name": "DTzn",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "NomAct",
+          "Description": "Акт вводу в експлуатацію"
+        },
+        {
+          "Name": "DTAct",
+          "Description": "Дата акту"
+        },
+        {
+          "Name": "Ozn",
+          "Description": "Ознака"
+        },
+        {
+          "Name": "TypeOb",
+          "Description": "Тип обліку"
+        },
+        {
+          "Name": "zavN",
+          "Description": "Заводський номер"
+        },
+        {
+          "Name": "DTvip",
+          "Description": "Рік випуску"
+        },
+        {
+          "Name": "TypeL",
+          "Description": "Тип лічильника"
+        },
+        {
+          "Name": "Dlan",
+          "Description": "Діаметр витратомірної ланки, мм"
+        },
+        {
+          "Name": "OdV",
+          "Description": "Одиниці виміру"
+        },
+        {
+          "Name": "Edge",
+          "Description": "Граничні межі вимірювання"
+        },
+        {
+          "Name": "PokP",
+          "Description": "Початкові показники теплової енергії"
+        },
+        {
+          "Name": "Vitrat",
+          "Description": "Витрати"
+        },
+        {
+          "Name": "DTpov",
+          "Description": "Дата наступної повірки (ДД.ММ.ГГГГ)"
+        },
+        {
+          "Name": "Plomba",
+          "Description": "Наявність пломб на обліку"
+        },
+        {
+          "Name": "Nplom",
+          "Description": "Номер пломби (витратомір)"
+        },
+        {
+          "Name": "Nobchis",
+          "Description": "Номер пломби (обчислювач)"
+        },
+        {
+          "Name": "t1",
+          "Description": "t1 — термоперетворювач на подаючому трубопроводі"
+        },
+        {
+          "Name": "t2",
+          "Description": "t2 — термоперетворювач на зворотному трубопроводі"
+        },
+        {
+          "Name": "chast15",
+          "Description": "З’єднувальні частини"
+        },
+        {
+          "Name": "Primitka",
+          "Description": "Примітка"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpom5",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "KPOM",
+          "Description": "Код приміщення"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "DTp",
+          "Description": "Дата початку дії"
+        },
+        {
+          "Name": "kodGr",
+          "Description": "Код тарифної групи"
+        },
+        {
+          "Name": "TteGk",
+          "Description": "Тариф на теплову енергію за Гкал"
+        },
+        {
+          "Name": "TopKvM",
+          "Description": "Тариф на опалення, за кв.м."
+        },
+        {
+          "Name": "TpidVodK",
+          "Description": "Тариф на підігрів води, за куб.м."
+        },
+        {
+          "Name": "TpidVodP",
+          "Description": "Тариф на підігрів води, за чол.міс"
+        },
+        {
+          "Name": "TgvK",
+          "Description": "Тариф на гарячу воду, за куб.м."
+        },
+        {
+          "Name": "TgvP",
+          "Description": "Тариф на гарячу воду, за чол.міс"
+        },
+        {
+          "Name": "TxvK",
+          "Description": "Тариф на холодну воду, за куб.м."
+        },
+        {
+          "Name": "TxvP",
+          "Description": "Тариф на холодну воду, за чол.міс"
+        },
+        {
+          "Name": "TximvT",
+          "Description": "Тариф на хімічно очищену воду, за тонну"
+        },
+        {
+          "Name": "TpnavGk",
+          "Description": "Тариф на приєднане теплове навантаження, за Гкал/год"
+        },
+        {
+          "Name": "TabonOP",
+          "Description": "Тариф на абонплату на опалення, за кв.м."
+        },
+        {
+          "Name": "TabonGV",
+          "Description": "Тариф на абонплату ГВП, за Гкал/год"
+        },
+        {
+          "Name": "Ttepidig",
+          "Description": "Тариф на теплову енергію для підігріву, за Гкал"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpom4",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "KPOM",
+          "Description": "Код приміщення"
+        },
+        {
+          "Name": "DTz9",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "NAME",
+          "Description": "Місце відключення"
+        },
+        {
+          "Name": "OPAL",
+          "Description": "Вид послуги: опалення"
+        },
+        {
+          "Name": "VEN",
+          "Description": "Вид послуги: вентиляція"
+        },
+        {
+          "Name": "desable",
+          "Description": "Відключив"
+        },
+        {
+          "Name": "Prim9",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "date1",
+          "Description": "Термін відсутності: з (ДД.ММ.РРРР)"
+        },
+        {
+          "Name": "date2",
+          "Description": "Термін відсутності: по (ДД.ММ.РРРР)"
+        },
+        {
+          "Name": "desable2",
+          "Description": "Відключив"
+        },
+        {
+          "Name": "Prim10",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "date3",
+          "Description": "Термін відсутності: з (ДД.ММ.РРРР)"
+        },
+        {
+          "Name": "date4",
+          "Description": "Термін відсутності: по (ДД.ММ.РРРР)"
+        },
+        {
+          "Name": "DTz10",
+          "Description": "Дата заведення"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpom3",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "KPOM",
+          "Description": "Код приміщення"
+        },
+        {
+          "Name": "DTz7",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "VtmOP",
+          "Description": "Об'єм теплових мереж в опалювальний сезон"
+        },
+        {
+          "Name": "VtmOPno",
+          "Description": "Об'єм теплових мереж в неопалювальний сезон"
+        },
+        {
+          "Name": "NvOP",
+          "Description": "Норматив втрат теплової енергії з охолодження в опалювальний сезон"
+        },
+        {
+          "Name": "NvOPn",
+          "Description": "Норматив втрат теплової енергії з охолодження в неопалювальний сезон"
+        },
+        {
+          "Name": "NAVop",
+          "Description": "Навантаження на опалення"
+        },
+        {
+          "Name": "NAVven",
+          "Description": "Навантаження на вентиляцію"
+        },
+        {
+          "Name": "MAXnGVP",
+          "Description": "Максимальне годинне навантаження на ГВП"
+        },
+        {
+          "Name": "SERnGVP",
+          "Description": "Середньодобове навантаження на ГВП"
+        },
+        {
+          "Name": "tNORM",
+          "Description": "Нормативна температура в приміщенні"
+        },
+        {
+          "Name": "tGVP",
+          "Description": "Температура ГВП"
+        },
+        {
+          "Name": "FinObl",
+          "Description": "Дата кінця обліку"
+        },
+        {
+          "Name": "Prim",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "DTz11",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "TEop",
+          "Description": "Кількість теплової енергії по опаленню"
+        },
+        {
+          "Name": "TEgvp",
+          "Description": "Кількість теплової енергії по ГВП"
+        },
+        {
+          "Name": "Kvit",
+          "Description": "Кількість витоків по акту"
+        },
+        {
+          "Name": "TERrob",
+          "Description": "Термін роботи"
+        },
+        {
+          "Name": "Top",
+          "Description": "Термін опалення без обліку"
+        },
+        {
+          "Name": "Tven",
+          "Description": "Термін вентиляції без обліку"
+        },
+        {
+          "Name": "Tgvp",
+          "Description": "Термін ГВП без обліку"
+        },
+        {
+          "Name": "tPRIM",
+          "Description": "Температура в приміщенні"
+        },
+        {
+          "Name": "tGVP",
+          "Description": "Температура ГВП"
+        },
+        {
+          "Name": "tPOD",
+          "Description": "Температура подачі"
+        },
+        {
+          "Name": "tZVOR",
+          "Description": "Температура зворотної"
+        },
+        {
+          "Name": "VpotT",
+          "Description": "Виробнича потреба тепла"
+        },
+        {
+          "Name": "VpotGVP",
+          "Description": "Виробнича потреба мережної води"
+        },
+        {
+          "Name": "ROZR",
+          "Description": "Брати до розрахунку в цьому місяці"
+        },
+        {
+          "Name": "PRIM",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "TEopmzk",
+          "Description": "розрахований обсяг МЗК"
+        },
+        {
+          "Name": "TEopco",
+          "Description": "розрахований обсяг теплової енергії на централізоване опалення"
+        },
+        {
+          "Name": "TEdonarax",
+          "Description": "донарахований обсяг теплової енергії до мінімальної частки споживання на послугу з постачання теплової енергії"
+        },
+        {
+          "Name": "KZvidkl",
+          "Description": "коефіцієнтZ відключень"
+        },
+        {
+          "Name": "DTz13",
+          "Description": "Місяць (дата заведення)"
+        },
+        {
+          "Name": "Vgvp",
+          "Description": "Кількість води"
+        },
+        {
+          "Name": "VOD",
+          "Description": "По водоміру"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpom2",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "DTdii",
+          "Description": "Дата початку дії"
+        },
+        {
+          "Name": "Vpos",
+          "Description": "Вид поставки"
+        },
+        {
+          "Name": "Szag",
+          "Description": "Загальна площа приміщення"
+        },
+        {
+          "Name": "Smzk",
+          "Description": "У т.ч. площа МЗК"
+        },
+        {
+          "Name": "SnoOP",
+          "Description": "Неопалювальна площа"
+        },
+        {
+          "Name": "Hight",
+          "Description": "Висота приміщень"
+        },
+        {
+          "Name": "Spr",
+          "Description": "Приведена опалювальна площа"
+        },
+        {
+          "Name": "Tpr",
+          "Description": "Температура в приміщенні (°C)"
+        },
+        {
+          "Name": "FinObl",
+          "Description": "Дата кінця обліку"
+        },
+        {
+          "Name": "LichOP",
+          "Description": "Лічильник комерційного обліку"
+        },
+        {
+          "Name": "Prim",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "KPOM",
+          "Description": "Код приміщення"
+        },
+        {
+          "Name": "DTdii3",
+          "Description": "Дата початку дії"
+        },
+        {
+          "Name": "Vpos3",
+          "Description": "Вид поставки"
+        },
+        {
+          "Name": "Rpod",
+          "Description": "Режим подачі ГВП"
+        },
+        {
+          "Name": "NORMsp",
+          "Description": "Добова норма споживання (л/добу)"
+        },
+        {
+          "Name": "SPOJ",
+          "Description": "Кількість споживачів (всього)"
+        },
+        {
+          "Name": "LICHno",
+          "Description": "З них без лічильника ГВП"
+        },
+        {
+          "Name": "VindL",
+          "Description": "Кількість води по індивідуальних лічильниках ГВП"
+        },
+        {
+          "Name": "VnoL",
+          "Description": "Кількість води без лічильників ГВП"
+        },
+        {
+          "Name": "V315",
+          "Description": "Кількість води за наказом №315"
+        },
+        {
+          "Name": "SnoL",
+          "Description": "Середнє споживання без лічильника (куб.м/люд/добу)"
+        },
+        {
+          "Name": "FinObl3",
+          "Description": "Дата кінця обліку"
+        },
+        {
+          "Name": "Kkor",
+          "Description": "Кількість користувачів ГВП"
+        },
+        {
+          "Name": "SPOJm",
+          "Description": "Споживання протягом місяця"
+        },
+        {
+          "Name": "RYSH",
+          "Description": "З рушникосушками"
+        },
+        {
+          "Name": "LICH",
+          "Description": "Лічильник комерційного обліку"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpom",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "NAZVA",
+          "Description": "Назва платника"
+        },
+        {
+          "Name": "KodPL",
+          "Description": "Код платника"
+        },
+        {
+          "Name": "DTdog",
+          "Description": "Дата укладення договору"
+        },
+        {
+          "Name": "Prizn",
+          "Description": "Призначення приміщення"
+        },
+        {
+          "Name": "Type",
+          "Description": "Тип приміщення"
+        },
+        {
+          "Name": "OPAL",
+          "Description": "Наявність опалення"
+        },
+        {
+          "Name": "GVP",
+          "Description": "Наявність гарячого водопостачання"
+        },
+        {
+          "Name": "VENT",
+          "Description": "Наявність вентиляції"
+        },
+        {
+          "Name": "VITRATU",
+          "Description": "Наявність витрат ТЕ"
+        },
+        {
+          "Name": "IdObTE",
+          "Description": "Індивідуальний облік (ТЕ)"
+        },
+        {
+          "Name": "AbonOp",
+          "Description": "Абонентська плата за опалення"
+        },
+        {
+          "Name": "Abongvp",
+          "Description": "Абонентська плата за гаряче водопостачання"
+        },
+        {
+          "Name": "FinObl",
+          "Description": "Дата кінця обліку"
+        },
+        {
+          "Name": "Prim",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "KPOM",
+          "Description": "Код приміщення"
+        },
+        {
+          "Name": "Kul",
+          "Description": "Код вулиці"
+        },
+        {
+          "Name": "KDOM",
+          "Description": "Код будинку"
+        },
+        {
+          "Name": "Kjkk",
+          "Description": "Код ЖЕКу"
+        },
+        {
+          "Name": "Krc",
+          "Description": "Код розрахункового центру"
+        },
+        {
+          "Name": "Krss",
+          "Description": "Код району соцзахисту"
+        },
+        {
+          "Name": "Kdil",
+          "Description": "Код дільниці для квитанцій"
+        },
+        {
+          "Name": "Ksud",
+          "Description": "Код районного суду"
+        },
+        {
+          "Name": "Kvvs",
+          "Description": "Код відділу виконавчої служби"
+        },
+        {
+          "Name": "Svbs",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "FileMask": "SPdom5",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "DOM",
+          "Description": "Код будинку"
+        },
+        {
+          "Name": "Zapis",
+          "Description": "Робити запис"
+        },
+        {
+          "Name": "TipGVP",
+          "Description": "Тип системи ГВП"
+        },
+        {
+          "Name": "DodGrf",
+          "Description": "Додаткова графа"
+        },
+        {
+          "Name": "Npok",
+          "Description": "Початкові показники"
+        },
+        {
+          "Name": "Kpok",
+          "Description": "Кінцеві показники"
+        },
+        {
+          "Name": "Rizn",
+          "Description": "Різниця"
+        },
+        {
+          "Name": "OdVum",
+          "Description": "Одиниця виміру"
+        },
+        {
+          "Name": "KilGK",
+          "Description": "Кількість в Гкал"
+        },
+        {
+          "Name": "Prim",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "nPokGvp",
+          "Description": "Початкові показники ГВП"
+        },
+        {
+          "Name": "kPokGvp",
+          "Description": "Кінцеві показники ГВП"
+        },
+        {
+          "Name": "rizGvp",
+          "Description": "Різниця ГВП"
+        },
+        {
+          "Name": "OdVGvp",
+          "Description": "Одиниця виміру ГВП"
+        },
+        {
+          "Name": "kGkGvp",
+          "Description": "Кількість в Гкал ГВП"
+        },
+        {
+          "Name": "Otst",
+          "Description": "Ознака циркуляційного трубопроводу"
+        },
+        {
+          "Name": "narVbs",
+          "Description": "Ознака нарахування ВБС"
+        },
+        {
+          "Name": "primGvp",
+          "Description": "Примітка ГВП"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPdom4",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "DOM",
+          "Description": "Код будинку"
+        },
+        {
+          "Name": "OP",
+          "Description": "Опалення"
+        },
+        {
+          "Name": "BOLop",
+          "Description": "Бойлерна (опалення)"
+        },
+        {
+          "Name": "TepDilop",
+          "Description": "Теплова ділянка (опалення)"
+        },
+        {
+          "Name": "GVS",
+          "Description": "Гаряча вода"
+        },
+        {
+          "Name": "BOLgvs",
+          "Description": "Бойлерна (ГВП)"
+        },
+        {
+          "Name": "TepDilgvs",
+          "Description": "Теплова ділянка (ГВП)"
+        },
+        {
+          "Name": "VEN",
+          "Description": "Вентиляція"
+        },
+        {
+          "Name": "BOLv",
+          "Description": "Бойлерна (вентиляція)"
+        },
+        {
+          "Name": "TepDilv",
+          "Description": "Теплова ділянка (вентиляція)"
+        },
+        {
+          "Name": "DomCMSY",
+          "Description": "Код буд. ЦМСУ"
+        },
+        {
+          "Name": "KvarCMSY",
+          "Description": "№ будинку"
+        },
+        {
+          "Name": "itpAty",
+          "Description": "наявності/відсутності ІТП/АТУ"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPdom3",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "DOM",
+          "Description": "Код будинку"
+        },
+        {
+          "Name": "POVERHU",
+          "Description": "Кількість поверхів"
+        },
+        {
+          "Name": "PID",
+          "Description": "Кількість під'їздів"
+        },
+        {
+          "Name": "KVART",
+          "Description": "Кількість квартир"
+        },
+        {
+          "Name": "OBEM",
+          "Description": "Об'єм по зовнішньому виміру"
+        },
+        {
+          "Name": "STINA",
+          "Description": "Матеріал стін"
+        },
+        {
+          "Name": "RIKBUD",
+          "Description": "Рік побудови"
+        },
+        {
+          "Name": "TepHar",
+          "Description": "Питома теплова характеристика"
+        },
+        {
+          "Name": "PLOSCHA",
+          "Description": "Загальна площа будинку"
+        },
+        {
+          "Name": "MZK",
+          "Description": "У т.ч. МЗК"
+        },
+        {
+          "Name": "sMZK",
+          "Description": "Площа будинку для коеф. МЗК"
+        },
+        {
+          "Name": "OP",
+          "Description": "Опалення"
+        },
+        {
+          "Name": "GVS",
+          "Description": "Гаряче водопостачання"
+        },
+        {
+          "Name": "VENT",
+          "Description": "Вентиляція"
+        },
+        {
+          "Name": "KOOF",
+          "Description": "Коригуючий коефіцієнт"
+        },
+        {
+          "Name": "ChastMZK",
+          "Description": "Частка на опалення МЗК"
+        },
+        {
+          "Name": "KoofMZK",
+          "Description": "Коефіцієнт обрахунку МЗК"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPdom2",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "DOM",
+          "Description": "Код будинку"
+        },
+        {
+          "Name": "HARAKTER",
+          "Description": "Характеристика будинку"
+        },
+        {
+          "Name": "RAION",
+          "Description": "Адміністративний район"
+        },
+        {
+          "Name": "MIKROR",
+          "Description": "Мікрорайон"
+        },
+        {
+          "Name": "ROZCEN",
+          "Description": "Код розрахункового центру"
+        },
+        {
+          "Name": "DILNUCA",
+          "Description": "Код дільниці"
+        },
+        {
+          "Name": "TEPR",
+          "Description": "Код теплового району"
+        },
+        {
+          "Name": "TEPRn",
+          "Description": "Код теплового району навантажень"
+        },
+        {
+          "Name": "INSP",
+          "Description": "Код інспектора"
+        },
+        {
+          "Name": "MASTER",
+          "Description": "Код майстра УТЕ"
+        },
+        {
+          "Name": "FINOlb",
+          "Description": "Дата кінця обліку"
+        },
+        {
+          "Name": "PRIM",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "CONTROL",
+          "Description": "Контролер ВМТЕ"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpl3",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "PL",
+          "Description": "Код платника"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата коригування"
+        },
+        {
+          "Name": "kPom",
+          "Description": "Код приміщення"
+        },
+        {
+          "Name": "servise",
+          "Description": "Послуга"
+        },
+        {
+          "Name": "DTp",
+          "Description": "За період: початок"
+        },
+        {
+          "Name": "DTk",
+          "Description": "За період: кінець"
+        },
+        {
+          "Name": "price",
+          "Description": "Сума"
+        },
+        {
+          "Name": "amount",
+          "Description": "Кількість"
+        },
+        {
+          "Name": "kod1C",
+          "Description": "Код послуги 1С"
+        },
+        {
+          "Name": "prumitka",
+          "Description": "Примітка"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpl2",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "PL",
+          "Description": "Код платника"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "fullName",
+          "Description": "Повна назва"
+        },
+        {
+          "Name": "fastname",
+          "Description": "Скорочена назва"
+        },
+        {
+          "Name": "PodAdr",
+          "Description": "Податкова адреса"
+        },
+        {
+          "Name": "kCity",
+          "Description": "Код міста"
+        },
+        {
+          "Name": "kStreet",
+          "Description": "Код вулиці"
+        },
+        {
+          "Name": "home",
+          "Description": "№ будинку"
+        },
+        {
+          "Name": "index",
+          "Description": "Індекс"
+        },
+        {
+          "Name": "tel",
+          "Description": "№ телефону"
+        },
+        {
+          "Name": "nFilii",
+          "Description": "Номер філії"
+        },
+        {
+          "Name": "dodGr",
+          "Description": "Додаткова графа"
+        },
+        {
+          "Name": "prumitka",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "DT11",
+          "Description": "Дата змінення"
+        },
+        {
+          "Name": "type",
+          "Description": "Тип кошторису"
+        },
+        {
+          "Name": "changes",
+          "Description": "Зміни до кошторису"
+        },
+        {
+          "Name": "DTp",
+          "Description": "Термін: початок"
+        },
+        {
+          "Name": "DTk",
+          "Description": "Термін: кінець"
+        },
+        {
+          "Name": "price",
+          "Description": "Сума по кошторису, грн."
+        },
+        {
+          "Name": "generFond",
+          "Description": "У т.ч. загальний фонд"
+        },
+        {
+          "Name": "specFond",
+          "Description": "Спеціальний фонд"
+        },
+        {
+          "Name": "prumitka2",
+          "Description": "Примітка"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPpl",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "PL",
+          "Description": "Код платника"
+        },
+        {
+          "Name": "NAME",
+          "Description": "Назва платника"
+        },
+        {
+          "Name": "ZKPO",
+          "Description": "ЗКПО"
+        },
+        {
+          "Name": "DOG",
+          "Description": "№ договору"
+        },
+        {
+          "Name": "dDOG",
+          "Description": "Дата укладення договору"
+        },
+        {
+          "Name": "dfDOG",
+          "Description": "Дата закінчення договору"
+        },
+        {
+          "Name": "TYPEd",
+          "Description": "Тип договору"
+        },
+        {
+          "Name": "BANK",
+          "Description": "Банк"
+        },
+        {
+          "Name": "Rrax",
+          "Description": "Розрахунковий рахунок"
+        },
+        {
+          "Name": "IPN",
+          "Description": "Індивідуальний податковий номер"
+        },
+        {
+          "Name": "SVID",
+          "Description": "№ свідоцтва про реєстрацію"
+        },
+        {
+          "Name": "PDV",
+          "Description": "Платник ПДВ на загальних умовах"
+        },
+        {
+          "Name": "mPDV",
+          "Description": "Метод оподаткування"
+        },
+        {
+          "Name": "oPDV",
+          "Description": "Особливості ПДВ"
+        },
+        {
+          "Name": "MIN",
+          "Description": "Міністерство"
+        },
+        {
+          "Name": "BUDJ",
+          "Description": "Бюджет"
+        },
+        {
+          "Name": "VID",
+          "Description": "Вид підприємства"
+        },
+        {
+          "Name": "NOMr",
+          "Description": "Номер рахунку"
+        },
+        {
+          "Name": "DTz1",
+          "Description": "Дата заведення основних"
+        },
+        {
+          "Name": "DTz101",
+          "Description": "Дата заведення додаткових"
+        },
+        {
+          "Name": "kUL",
+          "Description": "Код вулиці"
+        },
+        {
+          "Name": "nDOM",
+          "Description": "Номер будинку (юридична адреса)"
+        },
+        {
+          "Name": "kULr",
+          "Description": "Код вулиці (адреса для рахунків)"
+        },
+        {
+          "Name": "nDOMr",
+          "Description": "Номер будинку"
+        },
+        {
+          "Name": "POSADA",
+          "Description": "Керівник (посада)"
+        },
+        {
+          "Name": "FAM",
+          "Description": "Прізвище"
+        },
+        {
+          "Name": "IM",
+          "Description": "Ім’я"
+        },
+        {
+          "Name": "PRIZ",
+          "Description": "По батькові"
+        },
+        {
+          "Name": "TEL",
+          "Description": "№ телефону"
+        },
+        {
+          "Name": "BUH",
+          "Description": "Головний бухгалтер"
+        },
+        {
+          "Name": "TELb",
+          "Description": "№ телефону"
+        },
+        {
+          "Name": "VIDPOV",
+          "Description": "Відповідальний за теплове господарство (ПІБ)"
+        },
+        {
+          "Name": "INSP",
+          "Description": "Відповідальний інспектор"
+        },
+        {
+          "Name": "kRR",
+          "Description": "Код розрахункового центру"
+        },
+        {
+          "Name": "kDIL",
+          "Description": "Код дільниці"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPab9",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "AB",
+          "Description": "Особовий рахунок"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "porN",
+          "Description": "Порядковий номер"
+        },
+        {
+          "Name": "Dtp",
+          "Description": "Дата початку"
+        },
+        {
+          "Name": "Dtk",
+          "Description": "Дата кінця"
+        },
+        {
+          "Name": "kM6d",
+          "Description": "Кількість м³ за договором"
+        },
+        {
+          "Name": "dodGra",
+          "Description": "Додаткова графа"
+        },
+        {
+          "Name": "DTz2",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "Dtp2",
+          "Description": "Дата початку"
+        },
+        {
+          "Name": "Dtk2",
+          "Description": "Дата кінця"
+        },
+        {
+          "Name": "tarGr",
+          "Description": "Тарифна група"
+        },
+        {
+          "Name": "prim",
+          "Description": "Примітка"
+        },
+        {
+          "Name": "DTz3",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "kodD",
+          "Description": "Код будинку"
+        },
+        {
+          "Name": "kodP",
+          "Description": "Код помешкання"
+        },
+        {
+          "Name": "nomP",
+          "Description": "№ помешкання"
+        },
+        {
+          "Name": "dodGr",
+          "Description": "Додаткова графа"
+        },
+        {
+          "Name": "prim3",
+          "Description": "Примітка"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPab8",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "AB",
+          "Description": "Особовий рахунок"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "Dtp",
+          "Description": "Дата початку дії"
+        },
+        {
+          "Name": "norma",
+          "Description": "Норма споживання"
+        },
+        {
+          "Name": "typeGVP",
+          "Description": "Тип системи ГВП"
+        },
+        {
+          "Name": "tarPVm",
+          "Description": "Тариф на підігрів води, за куб.м"
+        },
+        {
+          "Name": "tarPVp",
+          "Description": "Тариф на підігрів води, за чол.міс"
+        },
+        {
+          "Name": "tarGVPm",
+          "Description": "Тариф на гарячу воду, за куб.м"
+        },
+        {
+          "Name": "tarGVPp",
+          "Description": "Тариф на гарячу воду, за чол.міс"
+        },
+        {
+          "Name": "kOsN",
+          "Description": "Кількість осіб зі зміненою нормою, чол."
+        },
+        {
+          "Name": "DTzD",
+          "Description": "Дата закінчення дії (ДД.ММ.РРРР)"
+        },
+        {
+          "Name": "prim",
+          "Description": "Примітка"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPab7",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "AB",
+          "Description": "Особовий рахунок"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "Dtp",
+          "Description": "Дата подачі до суду"
+        },
+        {
+          "Name": "sumsS",
+          "Description": "Сума по суду"
+        },
+        {
+          "Name": "DTn",
+          "Description": "Подання до суду: початок"
+        },
+        {
+          "Name": "DTk",
+          "Description": "Подання до суду: кінець"
+        },
+        {
+          "Name": "kSud",
+          "Description": "Код найменування суду"
+        },
+        {
+          "Name": "rozgl",
+          "Description": "Наслідки розгляду"
+        },
+        {
+          "Name": "DTrish",
+          "Description": "Дата рішення суду"
+        },
+        {
+          "Name": "nomSp",
+          "Description": "№ справи"
+        },
+        {
+          "Name": "osBorg",
+          "Description": "Сума задоволеного позову: основний борг"
+        },
+        {
+          "Name": "shtraf",
+          "Description": "Сума задоволеного позову: штрафні санкції"
+        },
+        {
+          "Name": "DTdvs",
+          "Description": "Дата подачі в ДВС"
+        },
+        {
+          "Name": "kPred",
+          "Description": "Код представника"
+        },
+        {
+          "Name": "DTvSud",
+          "Description": "Дата виконання суду"
+        },
+        {
+          "Name": "sumaZbor",
+          "Description": "Судовий збір: сума"
+        },
+        {
+          "Name": "DTopl",
+          "Description": "Дата оплати"
+        },
+        {
+          "Name": "Dopovn",
+          "Description": "Доповнення"
+        }
+      ]
+    },
+    {
+      "FileMask": "SPab6",
+      "AllowAdditionalFields": false,
+      "Fields": [
+        {
+          "Name": "AB",
+          "Description": "Особовий рахунок"
+        },
+        {
+          "Name": "DTz",
+          "Description": "Дата заведення"
+        },
+        {
+          "Name": "vlas",
+          "Description": "Власник обліку"
+        },
+        {
+          "Name": "DTact",
+          "Description": "Акт вводу від (ДД.ММ.РРРР)"
+        },
+        {
+          "Name": "typeO",
+          "Description": "Тип обліку"
+        },
+        {
+          "Name": "nZav",
+          "Description": "Заводський номер"
+        },
+        {
+          "Name": "yearV",
+          "Description": "Рік випуску"
+        },
+        {
+          "Name": "typeL",
+          "Description": "Тип лічильника"
+        },
+        {
+          "Name": "dianVL",
+          "Description": "Діаметр витратомірної ланки, мм"
+        },
+        {
+          "Name": "odV",
+          "Description": "Одиниці виміру"
+        },
+        {
+          "Name": "meji",
+          "Description": "Граничні межі вимірювання"
+        },
+        {
+          "Name": "pokTE",
+          "Description": "Початкові показники теплової енергії"
+        },
+        {
+          "Name": "gKal",
+          "Description": "У перерахунку на Гкал"
+        },
+        {
+          "Name": "DTpov",
+          "Description": "Дата наступної повірки"
+        },
+        {
+          "Name": "plomba",
+          "Description": "Наявність пломб на обліку"
+        },
+        {
+          "Name": "plomV",
+          "Description": "Номер пломби (витратомір)"
+        },
+        {
+          "Name": "plomO",
+          "Description": "Номер пломби (обчислювач)"
+        },
+        {
+          "Name": "t1",
+          "Description": "t1 — термоперетворювач на подаючому трубопроводі"
+        },
+        {
+          "Name": "t2",
+          "Description": "t2 — термоперетворювач на зворотному трубопроводі"
+        },
+        {
+          "Name": "chastka",
+          "Description": "З’єднувальні частини"
+        },
+        {
+          "Name": "DTzp",
+          "Description": "Дата заведення (ДД.ММ.РРРР)"
+        },
+        {
+          "Name": "pokP",
+          "Description": "Початкові показники лічильника ЦО"
+        },
+        {
+          "Name": "pokK",
+          "Description": "Кінцеві показники лічильника ЦО"
+        },
+        {
+          "Name": "DTp",
+          "Description": "Дата початку показників лічильника ЦО"
+        },
+        {
+          "Name": "DTk",
+          "Description": "Дата кінця показників лічильника ЦО"
+        },
+        {
+          "Name": "riz",
+          "Description": "Різниця"
+        },
+        {
+          "Name": "kGkal",
+          "Description": "Кількість у Гкал"
+        }
+      ]
+    }
+  ]
+}
