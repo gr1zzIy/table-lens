@@ -1,0 +1,145 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ui="using:TableLens.Desktop" xmlns:views="using:TableLens.Desktop.Views"
+        x:Class="TableLens.Desktop.Views.MainWindow" Title="TableLens" Width="1320" Height="860" MinWidth="960" MinHeight="640" WindowStartupLocation="CenterScreen" Icon="/Assets/tablelens.png">
+  <Grid RowDefinitions="Auto,Auto,*,Auto">
+    <Menu Grid.Row="0" Background="{DynamicResource SurfaceBrush}">
+      <MenuItem Header="{ui:Text File}">
+        <MenuItem Header="{ui:Text Open}" InputGesture="Ctrl+O" Click="OpenFilesClick" />
+        <MenuItem Header="{ui:Text Folder}" Click="OpenFolderClick" />
+        <MenuItem Header="{ui:Text Add}" InputGesture="Ctrl+Shift+O" Click="AddFilesClick" />
+        <Separator />
+        <MenuItem Header="{ui:Text New}" InputGesture="Ctrl+N" Click="NewTableClick" />
+        <MenuItem Header="{ui:Text Save}" InputGesture="Ctrl+S" Click="SaveClick" />
+        <MenuItem Header="{ui:Text Export}" InputGesture="Ctrl+E" Click="ExportClick" />
+        <Separator /><MenuItem Header="{ui:Text Settings}" Click="SettingsClick" /><MenuItem Header="{ui:Text Exit}" Click="ExitClick" />
+      </MenuItem>
+      <MenuItem Header="{ui:Text Project}">
+        <MenuItem Header="{ui:Text NewProject}" Click="NewProjectClick" />
+        <MenuItem Header="{ui:Text OpenProject}" Click="OpenProjectClick" />
+        <MenuItem Header="{ui:Text SaveProject}" Click="SaveProjectClick" />
+        <MenuItem Header="{ui:Text CloseProject}" Click="CloseProjectClick" />
+      </MenuItem>
+      <MenuItem Header="{ui:Text Edit}">
+        <MenuItem Header="{ui:Text EnableEdit}" Click="EditModeClick" />
+        <MenuItem Header="{ui:Text Undo}" InputGesture="Ctrl+Z" Click="UndoClick" />
+        <MenuItem Header="{ui:Text Redo}" InputGesture="Ctrl+Y" Click="RedoClick" />
+        <MenuItem Header="{ui:Text History}" Click="HistoryClick" />
+        <Separator /><MenuItem Header="{ui:Text SchemaEdit}" Click="SchemaEditClick" />
+      </MenuItem>
+      <MenuItem Header="{ui:Text Tools}">
+        <MenuItem Header="{ui:Text Compare}" Click="CompareClick" />
+        <MenuItem Header="{ui:Text CompareFolders}" Click="CompareFoldersClick" />
+        <MenuItem Header="{ui:Text Catalog}" Click="CatalogClick" />
+        <MenuItem Header="{ui:Text Import}" Click="SettingsClick" />
+      </MenuItem>
+      <MenuItem Header="{ui:Text Help}"><MenuItem Header="{ui:Text Shortcuts}" Click="ShortcutsClick" /><MenuItem Header="{ui:Text About}" Click="AboutClick" /></MenuItem>
+    </Menu>
+    <Border Grid.Row="1" Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource LineBrush}" BorderThickness="0,0,0,1" Padding="22,15">
+      <Grid ColumnDefinitions="*,Auto">
+        <StackPanel Orientation="Horizontal" Spacing="12">
+          <Image Source="/Assets/tablelens.png" Width="40" Height="40" />
+          <StackPanel Spacing="2"><TextBlock Text="TableLens" FontSize="21" FontWeight="Bold" /><TextBlock Text="{ui:Text Subtitle}" Classes="muted" FontSize="12" /></StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+          <Button Content="{ui:Text Folder}" Classes="quiet" Click="OpenFolderClick" />
+          <Button Content="{ui:Text Open}" Classes="primary" Click="OpenFilesClick" />
+        </StackPanel>
+      </Grid>
+    </Border>
+    <Grid Grid.Row="2" ColumnDefinitions="250,5,*">
+      <Border Grid.Column="0" Background="{DynamicResource SidebarBrush}" Padding="14,18,12,10">
+        <Grid RowDefinitions="Auto,Auto,Auto,*,Auto">
+          <StackPanel Spacing="9">
+            <TextBlock Text="{ui:Text Workspace}" Classes="eyebrow" />
+            <TextBlock x:Name="ProjectLabel" Text="{ui:Text LooseFiles}" FontWeight="SemiBold" FontSize="15" TextTrimming="CharacterEllipsis" />
+            <TextBlock x:Name="ProjectHint" Text="{ui:Text FreeMode}" Classes="muted" FontSize="11" TextWrapping="Wrap" />
+          </StackPanel>
+          <Grid Grid.Row="1" ColumnDefinitions="*,Auto" Margin="0,24,0,10">
+            <TextBlock Text="{ui:Text Files}" Classes="eyebrow" VerticalAlignment="Center" />
+            <Button Grid.Column="1" Content="+" Classes="quiet" Padding="8,2" FontSize="21" ToolTip.Tip="{ui:Text Add}" Click="AddFilesClick" />
+          </Grid>
+          <TextBox x:Name="FileSearch" Grid.Row="2" PlaceholderText="{ui:Text FileSearch}" TextChanged="FileSearchChanged" Margin="0,0,0,9" />
+          <ListBox x:Name="FileList" Grid.Row="3" SelectionChanged="FileSelectionChanged" Background="Transparent" BorderThickness="0" Padding="0" SelectionMode="Single">
+            <ListBox.ContextMenu><ContextMenu><MenuItem Header="{ui:Text Reload}" Click="ReloadClick" /><MenuItem Header="{ui:Text Remove}" Click="RemoveFileClick" /></ContextMenu></ListBox.ContextMenu>
+            <ListBox.ItemTemplate>
+              <DataTemplate DataType="views:FileEntry">
+                <Grid ColumnDefinitions="42,*" Margin="0,5" ToolTip.Tip="{Binding Tooltip}">
+                  <Border Background="{Binding BadgeBackground}" CornerRadius="6" Padding="4,7" VerticalAlignment="Top"><TextBlock Text="{Binding Extension}" Foreground="{Binding BadgeForeground}" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" /></Border>
+                  <StackPanel Grid.Column="1" Margin="9,0,0,0" Spacing="3"><TextBlock Text="{Binding Name}" FontWeight="Medium" TextTrimming="CharacterEllipsis" /><TextBlock Text="{Binding Detail}" Foreground="{Binding StatusBrush}" FontSize="11" TextTrimming="CharacterEllipsis" /></StackPanel>
+                </Grid>
+              </DataTemplate>
+            </ListBox.ItemTemplate>
+          </ListBox>
+          <StackPanel Grid.Row="4" Margin="0,12,0,0" Spacing="4">
+            <Button Content="{ui:Text Remove}" Classes="quiet" HorizontalContentAlignment="Left" Click="RemoveFileClick" />
+            <Button Content="{ui:Text Clear}" Classes="quiet" HorizontalContentAlignment="Left" Click="ClearFilesClick" />
+            <Button Content="{ui:Text New}" HorizontalContentAlignment="Left" Click="NewTableClick" />
+          </StackPanel>
+        </Grid>
+      </Border>
+      <GridSplitter Grid.Column="1" Width="5" Background="{DynamicResource LineBrush}" ResizeDirection="Columns" />
+      <Grid Grid.Column="2" Margin="20,18,20,14">
+        <Grid x:Name="DocumentPanel" IsVisible="False" RowDefinitions="Auto,Auto,Auto,Auto,*">
+          <Grid ColumnDefinitions="*,Auto">
+            <StackPanel Spacing="5"><TextBlock x:Name="DocumentTitle" FontSize="22" FontWeight="SemiBold" /><TextBlock x:Name="DocumentPath" Classes="muted" FontSize="11" TextTrimming="CharacterEllipsis" /></StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="7" VerticalAlignment="Top">
+              <Button Content="{ui:Text Reload}" Classes="quiet" Click="ReloadClick" ToolTip.Tip="F5" />
+              <Button Content="{ui:Text Export}" Click="ExportClick" />
+            </StackPanel>
+          </Grid>
+          <Border Grid.Row="1" Background="{DynamicResource SurfaceBrush}" CornerRadius="9" BorderBrush="{DynamicResource LineBrush}" BorderThickness="1" Padding="12,9" Margin="0,16,0,10">
+            <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="8">
+              <TextBox x:Name="SearchBox" PlaceholderText="{ui:Text Search}" BorderThickness="0" Background="Transparent" TextChanged="SearchChanged" ToolTip.Tip="{ui:Text SearchHelp}" />
+              <Button Grid.Column="1" Content="{ui:Text Reset}" Classes="quiet" Click="ResetFiltersClick" />
+              <Button Grid.Column="2" Content="?" Classes="quiet" Click="FilterHelpClick" ToolTip.Tip="{ui:Text FilterHint}" />
+            </Grid>
+          </Border>
+          <Grid Grid.Row="2" ColumnDefinitions="*,Auto" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center"><Border Background="{DynamicResource SoftAccentBrush}" CornerRadius="5" Padding="8,4"><TextBlock x:Name="ModeLabel" Text="{ui:Text ReadOnly}" FontSize="11" FontWeight="SemiBold" /></Border><TextBlock x:Name="TableSummary" Classes="muted" VerticalAlignment="Center" /></StackPanel>
+            <Button x:Name="EditModeButton" Grid.Column="1" Content="{ui:Text EnableEdit}" Click="EditModeClick" />
+          </Grid>
+          <StackPanel Grid.Row="3" Spacing="8">
+            <Border x:Name="NoticePanel" IsVisible="False" Background="{DynamicResource SoftAccentBrush}" CornerRadius="7" Padding="12,9" Margin="0,0,0,7"><TextBlock x:Name="NoticeText" TextWrapping="Wrap" /></Border>
+            <WrapPanel x:Name="EditToolbar" Orientation="Horizontal" IsVisible="False" ItemSpacing="7" LineSpacing="7" Margin="0,0,0,10">
+              <Button x:Name="SaveButton" Content="{ui:Text Save}" Classes="primary" Click="SaveClick" />
+              <Button x:Name="UndoButton" Content="↶" Click="UndoClick" ToolTip.Tip="{ui:Text Undo}" />
+              <Button x:Name="RedoButton" Content="↷" Click="RedoClick" ToolTip.Tip="{ui:Text Redo}" />
+              <Button Content="{ui:Text AddRow}" Click="AddRowClick" /><Button Content="{ui:Text EditRow}" Click="EditRowClick" />
+              <Button Content="{ui:Text DeleteRows}" Classes="danger" Click="DeleteRowsClick" /><Button Content="{ui:Text History}" Classes="quiet" Click="HistoryClick" />
+            </WrapPanel>
+          </StackPanel>
+          <Border Grid.Row="4" Background="{DynamicResource SurfaceBrush}" CornerRadius="9" BorderBrush="{DynamicResource LineBrush}" BorderThickness="1" ClipToBounds="True">
+            <TabControl x:Name="TableTabs">
+              <TabItem Header="{ui:Text Data}"><DataGrid x:Name="DataGrid" AutoGenerateColumns="False" IsReadOnly="True" CanUserSortColumns="True" CanUserResizeColumns="True" CanUserReorderColumns="True" SelectionMode="Extended" HeadersVisibility="Column" ColumnHeaderHeight="78" ClipboardCopyMode="IncludeHeader">
+                <DataGrid.ContextMenu><ContextMenu><MenuItem Header="{ui:Text CopyCell}" Click="CopyCellClick" /><MenuItem Header="{ui:Text CopyRows}" Click="CopyRowsClick" /></ContextMenu></DataGrid.ContextMenu>
+              </DataGrid></TabItem>
+              <TabItem Header="{ui:Text Schema}">
+                <Grid RowDefinitions="Auto,*">
+                  <StackPanel Orientation="Horizontal" Spacing="8" Margin="12"><Button x:Name="SchemaEditButton" Content="{ui:Text SchemaEdit}" Click="SchemaEditClick" /><Button x:Name="CatalogButton" Content="{ui:Text Catalog}" Click="CatalogClick" /></StackPanel>
+                  <DataGrid x:Name="SchemaGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeColumns="True" CanUserSortColumns="True" />
+                </Grid>
+              </TabItem>
+              <TabItem Header="{ui:Text Info}"><ScrollViewer Margin="20"><StackPanel Spacing="12"><TextBlock x:Name="InfoText" TextWrapping="Wrap" /><SelectableTextBlock x:Name="DiagnosticsText" TextWrapping="Wrap" FontSize="12" /></StackPanel></ScrollViewer></TabItem>
+            </TabControl>
+          </Border>
+        </Grid>
+        <Grid x:Name="WelcomePanel" RowDefinitions="*,Auto,*">
+          <StackPanel Grid.Row="1" MaxWidth="600" HorizontalAlignment="Center" Spacing="18">
+            <Border Width="80" Height="80" CornerRadius="20" Background="{DynamicResource SoftAccentBrush}" HorizontalAlignment="Center"><Image Source="/Assets/tablelens.png" Margin="12" /></Border>
+            <TextBlock Text="{ui:Text Welcome}" FontSize="28" FontWeight="SemiBold" TextAlignment="Center" TextWrapping="Wrap" />
+            <TextBlock Text="{ui:Text WelcomeText}" Classes="muted" TextAlignment="Center" TextWrapping="Wrap" LineHeight="23" />
+            <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center"><Button Content="{ui:Text Open}" Classes="primary" Click="OpenFilesClick" /><Button Content="{ui:Text Samples}" Click="SamplesClick" /></StackPanel>
+            <TextBlock Text="DBF   ·   CSV   ·   TSV   ·   JSON" Classes="eyebrow" TextAlignment="Center" Margin="0,4,0,0" />
+            <TextBlock x:Name="RecentLabel" Text="{ui:Text Recent}" Classes="muted" Margin="0,14,0,0" />
+            <ItemsControl x:Name="RecentList"><ItemsControl.ItemTemplate><DataTemplate><Button Content="{Binding}" Click="RecentFileClick" Classes="quiet" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" /></DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+          </StackPanel>
+        </Grid>
+        <Border x:Name="BusyOverlay" IsVisible="False" Background="{DynamicResource CanvasBrush}" Opacity="0.95" CornerRadius="9">
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15" Width="250"><ProgressBar IsIndeterminate="True" /><TextBlock x:Name="BusyText" Text="{ui:Text Loading}" TextAlignment="Center" /><Button x:Name="CancelOperationButton" Content="{ui:Text Cancel}" HorizontalAlignment="Center" Click="CancelClick" /></StackPanel>
+        </Border>
+      </Grid>
+    </Grid>
+    <Border Grid.Row="3" Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource LineBrush}" BorderThickness="0,1,0,0" Padding="16,8">
+      <Grid ColumnDefinitions="*,Auto"><TextBlock x:Name="StatusText" Text="{ui:Text Ready}" Classes="muted" FontSize="11" TextTrimming="CharacterEllipsis" /><TextBlock x:Name="StatusMeta" Grid.Column="1" Text="TableLens 1.0  ·  Local files" Classes="muted" FontSize="11" /></Grid>
+    </Border>
+  </Grid>
+</Window>
