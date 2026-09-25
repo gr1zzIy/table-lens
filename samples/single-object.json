@@ -1,0 +1,6 @@
+{
+  "name": "TableLens",
+  "version": "1.0",
+  "offline": true,
+  "formats": ["dbf", "csv", "json"]
+}

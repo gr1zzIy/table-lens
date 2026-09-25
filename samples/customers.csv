@@ -1,0 +1,13 @@
+ACCOUNT,NAME,CITY,BALANCE,ACTIVE,UPDATED
+000101,Олена Коваленко,Kyiv,1280.50,true,2026-09-01
+000102,Andrii Romanenko,Lviv,955.20,true,2026-09-02
+000103,Марія Бондар,Odesa,0.00,false,2026-09-03
+000104,Sofia Melnyk,Dnipro,2104.75,true,2026-09-04
+000105,Danylo Shevchenko,Kyiv,682.00,true,2026-09-05
+000106,Юлія Ткаченко,Lviv,1130.40,false,2026-09-06
+000107,Maksym Savchenko,Poltava,478.10,true,2026-09-07
+000108,Anna Hrytsenko,Kyiv,1675.30,true,2026-09-08
+000109,Тарас Петренко,Vinnytsia,312.80,false,2026-09-09
+000110,Kateryna Moroz,Lutsk,895.60,true,2026-09-10
+000111,Oleh Kovalenko,Cherkasy,145.00,true,2026-09-11
+000112,Вікторія Шевчук,Lviv,2034.15,true,2026-09-12

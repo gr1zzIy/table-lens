@@ -1,0 +1,45 @@
+{
+  "exportedAt": "2026-09-30",
+  "source": "fictional sample data",
+  "records": [
+    {
+      "id": 1,
+      "name": "Catalog cleanup",
+      "status": "in progress",
+      "budget": 1280.5,
+      "active": true,
+      "owner": {
+        "name": "Olena",
+        "team": "Operations"
+      },
+      "tags": [
+        "dbf",
+        "migration"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "CSV import review",
+      "status": "done",
+      "budget": 955.2,
+      "active": true,
+      "owner": {
+        "name": "Andrii",
+        "team": "Data"
+      },
+      "tags": [
+        "csv"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "New workspace",
+      "status": "planned",
+      "budget": null,
+      "active": false,
+      "owner": null,
+      "tags": [],
+      "note": "Only this row has a note"
+    }
+  ]
+}
