@@ -1,6 +1,7 @@
 using System.Data;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Data;
 using Avalonia.Headless;
 using Avalonia.Headless.XUnit;
 using Avalonia.Interactivity;
@@ -76,9 +77,7 @@ public sealed class WindowTests
         FlushUi(window);
 
         var editor = BeginEditAndGetEditor(window, grid);
-        editor.Focus();
-        editor.SelectAll();
-        window.KeyTextInput("Updated");
+        SetEditorText(editor, "Updated");
         FlushUi(window);
 
         Assert.True(grid.CommitEdit());
@@ -99,9 +98,7 @@ public sealed class WindowTests
         FlushUi(window);
 
         editor = BeginEditAndGetEditor(window, grid);
-        editor.Focus();
-        editor.SelectAll();
-        window.KeyTextInput("Discard me");
+        SetEditorText(editor, "Discard me");
         FlushUi(window);
 
         Assert.Equal("Discard me", editor.Text);
@@ -214,5 +211,14 @@ public sealed class WindowTests
 
         Dispatcher.UIThread.RunJobs();
         window.UpdateLayout();
+    }
+
+    private static void SetEditorText(TextBox editor, string text)
+    {
+        var binding = BindingOperations.GetBindingExpressionBase(editor, TextBox.TextProperty)
+                      ?? throw new InvalidOperationException("TextBox.Text has no binding.");
+
+        editor.SetCurrentValue(TextBox.TextProperty, text);
+        binding.UpdateSource();
     }
 }
