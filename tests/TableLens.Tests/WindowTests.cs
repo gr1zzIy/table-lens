@@ -50,28 +50,70 @@ public sealed class WindowTests
     {
         using var temp = new TestDirectory();
         var path = temp.File("editable.csv", "ID,NAME\n001,Olena\n");
-        var window = new MainWindow(new WorkspaceStore(System.IO.Path.Combine(temp.Path, "settings")), new AppSettings(), []);
-        window.Show(); await window.AddPathsAsync([path], false).WaitAsync(TimeSpan.FromSeconds(15));
+
+        var window = new MainWindow(
+            new WorkspaceStore(System.IO.Path.Combine(temp.Path, "settings")),
+            new AppSettings(),
+            [])
+        {
+            Width = 1200,
+            Height = 800
+        };
+
+        window.Show();
+        await window.AddPathsAsync([path], false).WaitAsync(TimeSpan.FromSeconds(15));
+        FlushUi(window);
+
         var grid = window.FindControl<DataGrid>("DataGrid")!;
-        window.FindControl<Button>("EditModeButton")!.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-        grid.SelectedIndex = 0; grid.CurrentColumn = grid.Columns[1]; grid.Focus(); window.UpdateLayout(); Dispatcher.UIThread.RunJobs();
+
+        window.FindControl<Button>("EditModeButton")!
+            .RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        FlushUi(window);
+
+        grid.SelectedIndex = 0;
+        grid.CurrentColumn = grid.Columns[1];
+        grid.Focus();
+        FlushUi(window);
+
         Assert.True(grid.BeginEdit());
-        window.UpdateLayout(); Dispatcher.UIThread.RunJobs();
-        var editor = grid.GetVisualDescendants().OfType<TextBox>().First(t => t.Text == "Olena");
+
+        var editor = FindGridEditor(window, grid);
         editor.Text = "Updated";
-        Assert.True(grid.CommitEdit()); Dispatcher.UIThread.RunJobs();
+        FlushUi(window);
+
+        Assert.True(grid.CommitEdit());
+        FlushUi(window);
+
         Assert.Equal("Updated", window.ActiveDocument!.Table.Rows[0][1]);
         Assert.True(window.FindControl<Button>("SaveButton")!.IsEnabled);
-        window.FindControl<Button>("UndoButton")!.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+
+        window.FindControl<Button>("UndoButton")!
+            .RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        FlushUi(window);
+
         Assert.Equal("Olena", window.ActiveDocument.Table.Rows[0][1]);
-        grid.SelectedIndex = 0; grid.CurrentColumn = grid.Columns[1]; grid.Focus(); window.UpdateLayout();
-        Assert.True(grid.BeginEdit()); window.UpdateLayout(); Dispatcher.UIThread.RunJobs();
-        editor = grid.GetVisualDescendants().OfType<TextBox>().First(t => t.Text == "Olena");
+
+        grid.SelectedIndex = 0;
+        grid.CurrentColumn = grid.Columns[1];
+        grid.Focus();
+        FlushUi(window);
+
+        Assert.True(grid.BeginEdit());
+
+        editor = FindGridEditor(window, grid);
         editor.Text = "Discard me";
-        Assert.True(((GridRow)grid.SelectedItem!).HasPendingChanges, "Grid must start a row transaction before changing a cell");
-        grid.CancelEdit(); Dispatcher.UIThread.RunJobs();
+        FlushUi(window);
+
+        Assert.True(
+            ((GridRow)grid.SelectedItem!).HasPendingChanges,
+            "Grid must start a row transaction before changing a cell");
+
+        grid.CancelEdit();
+        FlushUi(window);
+
         Assert.Equal("Olena", window.ActiveDocument.Table.Rows[0][1]);
         Assert.False(window.FindControl<Button>("SaveButton")!.IsEnabled);
+
         window.Close();
     }
 
@@ -114,5 +156,35 @@ public sealed class WindowTests
     {
         using var image = window.CaptureRenderedFrame(); Assert.NotNull(image);
         image.Save(path, Avalonia.Media.Imaging.PngBitmapEncoderOptions.Default);
+    }
+
+    private static TextBox FindGridEditor(MainWindow window, DataGrid grid)
+    {
+        for (var i = 0; i < 5; i++)
+        {
+            FlushUi(window);
+
+            var editor = grid.GetVisualDescendants()
+                .OfType<TextBox>()
+                .FirstOrDefault(t => t.DataContext is GridRow);
+
+            if (editor != null)
+                return editor;
+        }
+
+        throw new InvalidOperationException("DataGrid editor was not created after BeginEdit().");
+    }
+
+    private static void FlushUi(MainWindow window)
+    {
+        for (var i = 0; i < 3; i++)
+        {
+            Dispatcher.UIThread.RunJobs();
+            window.UpdateLayout();
+            AvaloniaHeadlessPlatform.ForceRenderTimerTick();
+        }
+
+        Dispatcher.UIThread.RunJobs();
+        window.UpdateLayout();
     }
 }
