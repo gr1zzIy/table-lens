@@ -75,9 +75,7 @@ public sealed class WindowTests
         grid.Focus();
         FlushUi(window);
 
-        Assert.True(grid.BeginEdit());
-
-        var editor = FindGridEditor(window, grid);
+        var editor = BeginEditAndGetEditor(window, grid);
         editor.Text = "Updated";
         FlushUi(window);
 
@@ -98,9 +96,7 @@ public sealed class WindowTests
         grid.Focus();
         FlushUi(window);
 
-        Assert.True(grid.BeginEdit());
-
-        editor = FindGridEditor(window, grid);
+        editor = BeginEditAndGetEditor(window, grid);
         editor.Text = "Discard me";
         FlushUi(window);
 
@@ -158,21 +154,47 @@ public sealed class WindowTests
         image.Save(path, Avalonia.Media.Imaging.PngBitmapEncoderOptions.Default);
     }
 
-    private static TextBox FindGridEditor(MainWindow window, DataGrid grid)
+    private static TextBox BeginEditAndGetEditor(MainWindow window, DataGrid grid)
     {
-        for (var i = 0; i < 5; i++)
+        TextBox? editor = null;
+
+        void OnPreparingCellForEdit(object? sender, DataGridPreparingCellForEditEventArgs e)
         {
+            if (e.Column == grid.CurrentColumn && e.EditingElement is TextBox textBox)
+                editor = textBox;
+        }
+
+        grid.PreparingCellForEdit += OnPreparingCellForEdit;
+
+        try
+        {
+            var item = grid.SelectedItem
+                       ?? throw new InvalidOperationException("DataGrid has no selected item.");
+
+            var column = grid.CurrentColumn
+                         ?? throw new InvalidOperationException("DataGrid has no current column.");
+
+            grid.ScrollIntoView(item, column);
             FlushUi(window);
 
-            var editor = grid.GetVisualDescendants()
-                .OfType<TextBox>()
-                .FirstOrDefault(t => t.DataContext is GridRow);
+            Assert.True(grid.BeginEdit());
+            FlushUi(window);
 
             if (editor != null)
                 return editor;
-        }
 
-        throw new InvalidOperationException("DataGrid editor was not created after BeginEdit().");
+            // Fallback: беремо content безпосередньо з поточної колонки,
+            // а не шукаємо TextBox по всьому visual tree.
+            if (column.GetCellContent(item) is TextBox textBox)
+                return textBox;
+
+            throw new InvalidOperationException(
+                "DataGrid editing element was not created after BeginEdit().");
+        }
+        finally
+        {
+            grid.PreparingCellForEdit -= OnPreparingCellForEdit;
+        }
     }
 
     private static void FlushUi(MainWindow window)
