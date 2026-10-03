@@ -76,7 +76,9 @@ public sealed class WindowTests
         FlushUi(window);
 
         var editor = BeginEditAndGetEditor(window, grid);
-        editor.Text = "Updated";
+        editor.Focus();
+        editor.SelectAll();
+        window.KeyTextInput("Updated");
         FlushUi(window);
 
         Assert.True(grid.CommitEdit());
@@ -97,8 +99,12 @@ public sealed class WindowTests
         FlushUi(window);
 
         editor = BeginEditAndGetEditor(window, grid);
-        editor.Text = "Discard me";
+        editor.Focus();
+        editor.SelectAll();
+        window.KeyTextInput("Discard me");
         FlushUi(window);
+
+        Assert.Equal("Discard me", editor.Text);
 
         Assert.True(
             ((GridRow)grid.SelectedItem!).HasPendingChanges,
